@@ -80,7 +80,7 @@ input.addEventListener('select',(e)=>{
 //add movie to nomination list
 func=async param=>{
     //search for a movie based on id
-    const response=await(axios.get('http://www.omdbapi.com/',{
+    const response=await(axios.get('https://www.omdbapi.com/',{
         params:{
             apikey:'934e47ff',
             i:param

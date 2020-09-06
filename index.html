@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Movies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
@@ -15,29 +15,27 @@
     </head>
     <body>
         <h1 id='mainTitle'>The shoppies</h1>
-
-
         <div class="container">
             <div class="row mt-2">
               <div class="col">
-
-                <label><b>Movie title:</b></label>            
+                <h5><b>Movie title:</b></h5>            
                     <input class="form-control mr-sm-6" type="search" placeholder="Search " aria-label="Search">
               </div>
             </div>
-            <div class='row mt-2'>
-            <div class='col-6'>
-<div class='resultTitle'></div>
+      
 
-                <ul id='movieList' class='list-group list-group-flush'></ul>
+            <div class='row mt-2'>
+                <div class='col-6'>
+                    <div class='resultTitle'></div>
+                        <ul id='movieList' class='list-group list-group-flush'></ul>
               </div>
            
-              <div class="col-6">  
+              <div  class="col-6">  
                 <div id='nominationTitle'></div>      
-                    <ul id='nominationList' class='list-group list-group-flush' ></ul>
-              
+                    <ul id='nominationList' class='list-group list-group-flush' ></ul>              
             </div>
         </div>
+
         <script src="index.js" ></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

@@ -32,10 +32,10 @@ const search = (callback) => {
   };
   
    function createLink(context){
-      let id;
+    let id;
     let link=document.createElement('li')
     if(arguments.length===2){
-id=arguments[1]
+    id=arguments[1]
         link.setAttribute('id', id)
     }
     link.classList.add('list-group-item')
@@ -75,7 +75,7 @@ id=arguments[1]
             ${findMovie||inStorage?`
             <button type="button" class=list-group-item-action" id="${movie.imdbID}" disabled onclick="nominate('${movie.imdbID}')">Nominate</button>  `:`  <button type="button" class=list-group-item-action" id="${movie.imdbID}"  onclick="nominate('${movie.imdbID}')">Nominate</button> `}
        `
-       const li=createLink(context)
+            const li=createLink(context)
             movieList.appendChild(li) 
     }  
  }
@@ -119,7 +119,6 @@ nominate=async param=>{
     document.querySelector('#nominationList').appendChild(li)   
     document.querySelector('#'+param).disabled=true
     nominatedMovies.push(movie.imdbID)
-    localStorage.setItem('nominated movies', JSON.stringify(nominatedMovies))
     localStorage.setItem(`${movie.imdbID}`, context)
 
  }

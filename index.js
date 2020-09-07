@@ -31,11 +31,11 @@ const search = (callback) => {
     };
   };
   
-   function createLink(context){
+   const createLink=(context,...args)=>{
     let id;
     let link=document.createElement('li')
-    if(arguments.length===2){
-    id=arguments[1]
+    if(args.length!==0){
+    id=args[0]
         link.setAttribute('id', id)
     }
     link.classList.add('list-group-item')
@@ -71,7 +71,8 @@ const search = (callback) => {
             })
             const inStorage=movie.imdbID in localStorage
             const context=`
-            ${movie.Title} (${movie.Year}) <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}">Imdb</a>
+            ${movie.Title} (${movie.Year})
+             <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}">Imdb</a>
             ${findMovie||inStorage?`
             <button type="button" class=list-group-item-action" id="${movie.imdbID}" disabled onclick="nominate('${movie.imdbID}')">Nominate</button>  `:`  <button type="button" class=list-group-item-action" id="${movie.imdbID}"  onclick="nominate('${movie.imdbID}')">Nominate</button> `}
        `
@@ -90,6 +91,13 @@ const search = (callback) => {
         e.target.value=''
     })
 
+
+const createNominatedMovies=()=>{
+    let nominatedMovies=[]
+    return (movie)=>{
+        nominatedMovies.push(movie)
+    }
+}
 
 
 /////add movie to nomination list

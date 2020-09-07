@@ -92,14 +92,6 @@ const search = (callback) => {
     })
 
 
-const createNominatedMovies=()=>{
-    let nominatedMovies=[]
-    return (movie)=>{
-        nominatedMovies.push(movie)
-    }
-}
-
-
 /////add movie to nomination list
 
 nominate=async param=>{
@@ -152,6 +144,7 @@ nominate=async param=>{
         }
 }
 
+    ///// After user leaves the page , nomination list is saved in localStorage
     const checkStorage=()=>{
 /// -> for testing purpose to clear localstorage
 //localStorage.clear()
